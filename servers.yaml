@@ -1,0 +1,29 @@
+servers:
+  # 本地stdio服务器
+  - name: calc
+    transport: stdio
+    command: python
+    path: servers/calc.py
+    enabled: false
+  
+  # SSE服务器
+  - name: remote-wiki-sse
+    transport: sse
+    url: http://localhost:8080/sse
+    enabled: false
+
+  
+  # StreamableHTTP服务器示例
+  - name: weather-stream
+    transport: streamable_http
+    url: http://localhost:8000/mcp
+    enabled: true
+    #   headers:
+    #     Authorization: Bearer your-api-key-here
+    
+  # WebSocket服务器
+  - name: websocket-server
+    transport: websocket
+    url: ws://localhost:8765/ws
+    enabled: false
+
