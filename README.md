@@ -22,7 +22,7 @@ cd mcp-client-python
 # Install dependencies
 uv venv
 source .venv/bin/activate
-uv pip install .
+uv sync
 ``` 
 
 ## Configuration
